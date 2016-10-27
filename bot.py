@@ -24,20 +24,17 @@ async def on_ready():
     
 @client.event
 async def on_message(message):
-    if message.content.startswith('!test'):
-        counter = 0
-        tmp = await client.send_message(message.channel, 'Calculating messages...')
-        async for log in client.logs_from(message.channel, limit=100):
-            if log.author == message.author:
-                counter += 1
+        if message.content.startswith('!test'):
+                counter = 0
+                tmp = await client.send_message(message.channel, 'Calculating messages...')
+                async for log in client.logs_from(message.channel, limit=100):
+                    if log.author == message.author:
+
+                        counter += 1
 
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
-    elif message.content.startswith('!!sleep'):
-                await asyncio.sleep(5)
-                await client.send_message(message.channel, 'Done sleeping')
 
-    elif message.content.startswith('!!about'):
-                await asyncio.sleep(5)
+        elif message.content.startswith('!!about'):
                 await client.send_message(message.channel, 'Hi im DragonBot')
                 await client.send_message(message.channel, 'I was devloped by @Blazy#2607')
                 await client.send_message(message.channel, 'If you need help or want to report a bug, Go here')
@@ -45,6 +42,11 @@ async def on_message(message):
                 await client.send_message(message.channel, 'Review the code at https://github.com/BlazyDoesDev/DragonBot/tree/indev')
                 await client.send_message(message.channel, '***Note*** This bot is in indev, Their will be a massive ammount of bugs, plz dont hate me :(')
                 
+        elif message.content.startswith('!!help'):
+             await client.send_message(user, 'Here is a list of commands \n !!about - Tells you about bot \n !!sleep Debug Command')
+                                       
+                
+                
 
 
-client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvO1_Q.X3ODeYDMUWJpw54oojwe-eM-PGI') # This is a invailad token lol
+client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvO3Qg.cJO_C5TVJNYc2vsplGGQy8WhxH4') # This is a invailad token lol
