@@ -1,10 +1,6 @@
 #!/usr/bin/python
 import discord
 import asyncio
-import os
-from discord.ext import commands
-from cleverbot import Cleverbot as Clv
-    
 # from cleverbot import cleverbot
 
 
@@ -33,6 +29,7 @@ async def on_message(message):
 
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
 
+<<<<<<< HEAD
         elif message.content.startswith('!!about'):
                 await client.send_message(message.channel, 'Hi im DragonBot')
                 await client.send_message(message.channel, 'I was devloped by @Blazy#2607')
@@ -49,3 +46,6 @@ async def on_message(message):
 
 
 client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvO3Qg.cJO_C5TVJNYc2vsplGGQy8WhxH4') # This is a invailad token lol
+=======
+client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvOwXg.fNFmbRgzItqn7loRylZLdUaOfds') # This is a invailad token lol
+>>>>>>> parent of 6407d98... Added git add bot.pyabout
