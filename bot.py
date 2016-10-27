@@ -1,6 +1,10 @@
 #!/usr/bin/python
 import discord
 import asyncio
+import os
+from discord.ext import commands
+from cleverbot import Cleverbot as Clv
+    
 # from cleverbot import cleverbot
 
 
@@ -32,4 +36,15 @@ async def on_message(message):
                 await asyncio.sleep(5)
                 await client.send_message(message.channel, 'Done sleeping')
 
-client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvOwXg.fNFmbRgzItqn7loRylZLdUaOfds') # This is a invailad token lol
+    elif message.content.startswith('!!about'):
+                await asyncio.sleep(5)
+                await client.send_message(message.channel, 'Hi im DragonBot')
+                await client.send_message(message.channel, 'I was devloped by @Blazy#2607')
+                await client.send_message(message.channel, 'If you need help or want to report a bug, Go here')
+                await client.send_message(message.channel, 'https://discord.gg/HNjY8jU')
+                await client.send_message(message.channel, 'Review the code at https://github.com/BlazyDoesDev/DragonBot/tree/indev')
+                await client.send_message(message.channel, '***Note*** This bot is in indev, Their will be a massive ammount of bugs, plz dont hate me :(')
+                
+
+
+client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvO1_Q.X3ODeYDMUWJpw54oojwe-eM-PGI') # This is a invailad token lol
