@@ -32,4 +32,4 @@ async def on_message(message):
                 await asyncio.sleep(5)
                 await client.send_message(message.channel, 'Done sleeping')
 
-client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvOwXg.fNFmbRgzItqn7loRylZLdUaOfds')
+client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvOwXg.fNFmbRgzItqn7loRylZLdUaOfds') # This is a invailad token lol
