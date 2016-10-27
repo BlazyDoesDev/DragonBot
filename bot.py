@@ -1,8 +1,12 @@
 #!/usr/bin/python
 import discord
 import asyncio
+# from cleverbot import cleverbot
+
 
 client = discord.Client()
+# cb = cleverbot()
+
 
 @client.event
 async def on_ready():
@@ -11,6 +15,7 @@ async def on_ready():
         print('Im logged in as ' + client.user.name)
         print('The bots user id is ' + client.user.id)
         print('Lets go..')
+        print('My oauth link is https://discordapp.com/oauth2/authorize?&client_id=241214797478232064&scope=bot&permissions=8') # TODO - Make 
         print('-------------')
     
 @client.event
@@ -23,8 +28,8 @@ async def on_message(message):
                 counter += 1
 
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
-    elif message.content.startswith('!sleep'):
-        await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
+    elif message.content.startswith('!!sleep'):
+                await asyncio.sleep(5)
+                await client.send_message(message.channel, 'Done sleeping')
 
-client.run('token')
+client.run('MjQxMjE0Nzk3NDc4MjMyMDY0.CvOwXg.fNFmbRgzItqn7loRylZLdUaOfds')
